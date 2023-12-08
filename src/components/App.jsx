@@ -12,6 +12,10 @@ export default function App(){
         <Timer/>
         <Timer/>
         </main>
-        <footer role="contentinfo"></footer>
+        <footer role="contentinfo">
+        <img src="./images/icon-facebook.svg" alt="facebook-icon"/>
+        <img src="./images/icon-pinterest.svg" alt="pinterest-icon"/>
+        <img src="./images/icon-instagram.svg" alt="instagram-icon"/>
+        </footer>
     </>
 }
