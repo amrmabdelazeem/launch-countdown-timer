@@ -7,10 +7,10 @@ export default function App(){
             <h1>WE'RE LAUNCHING SOON</h1>
         </header>
         <main role="main" className="timer">
-        <Timer/>
-        <Timer/>
-        <Timer/>
-        <Timer/>
+        <Timer time="DAYS"/>
+        <Timer time="HOURS"/>
+        <Timer time="MINUTES"/>
+        <Timer time="SECONDS"/>
         </main>
         <footer role="contentinfo">
         <img src="./images/icon-facebook.svg" alt="facebook-icon"/>
