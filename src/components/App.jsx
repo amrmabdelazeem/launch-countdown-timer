@@ -7,9 +7,10 @@ export default function App(){
         </header>
         <main role="main">
             <div className="card">
-                <div className="page1"></div>
+                <div className="page1">
+                {/* <h2>day</h2> */}
+                </div>
                 <div className="page2">
-                    <h2></h2>
                 </div>
             </div>
         </main>
