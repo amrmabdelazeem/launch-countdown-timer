@@ -3,7 +3,7 @@ import Timer from "./Timer";
 
 export default function App(){
     return <>
-        <header role="banner">
+        <header role="banner" className="title">
             <h1>WE'RE LAUNCHING SOON</h1>
         </header>
         <main role="main" className="timer">

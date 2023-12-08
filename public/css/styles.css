@@ -3,38 +3,75 @@
 *{
     font-family: 'Red Hat Text', sans-serif;
 }
-
-body{
-    background-color: hsl(240, 17%, 14%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100dvh;
+:root{
+    --primary-color:hsl(237, 18%, 59%);
+    --secondary-color:hsl(345, 95%, 68%);
+    --dark-desaturated-blue:hsl(236, 21%, 26%);
+    --very-dark-blue:hsl(235, 16%, 14%);
+    --very-dark-black-blue: hsl(234, 17%, 12%);
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--very-dark-black-blue);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../images/bg-stars.svg");
+
+    
+}
+.title{
+    margin-top: 150px;
+}
 h1{
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+
 }
 
 main{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .card{
-    width: 65px;
+    width: 70px;
     height: 70px;
-    margin: 10px;
+    margin: 0;
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: 100%;
+    position: relative;
 }
 .page1{
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 10px 10px;
     background-color: hsl(240, 22%, 22%);
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 .page2{
     border-radius: 5px 5px 5px 5px;
     background-color: hsl(240, 22%, 22%);
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+h2{
+    font-size: 2rem;
+    color: var(--secondary-color);
+    position: absolute;
+    top: -15px;
+}
+p{
+    color: var(--primary-color);
+    position: absolute;
+    top: 30px;
 }
