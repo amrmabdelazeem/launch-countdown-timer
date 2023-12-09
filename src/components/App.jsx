@@ -9,11 +9,11 @@ export default function App() {
     seconds: "",
   });
 
-  function handleTime() {
-    setNewTime((preSecond) => {
-      return { ...preSecond, days, hours, minutes, seconds };
-    });
-  }
+//   setInterval(()=>{
+//     setNewTime((preSecond) => {
+//         return { ...preSecond, days, hours, minutes, seconds };
+//       })
+//   }, 1000)
   const newDate = new Date("Dec 24, 2023 00:00:00").getTime();
   const now = new Date().getTime();
   const timeRemaining = newDate - now;
@@ -32,7 +32,7 @@ export default function App() {
       <header role="banner" className="title">
         <h1>WE'RE LAUNCHING SOON</h1>
       </header>
-      <main role="main" className="timer" onClick={handleTime}>
+      <main role="main" className="timer">
         <Timer time="DAYS" show={newTime.days} />
         <Timer time="HOURS" show={newTime.hours} />
         <Timer time="MINUTES" show={newTime.minutes} />
