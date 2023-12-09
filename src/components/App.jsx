@@ -2,6 +2,8 @@ import React from "react";
 import Timer from "./Timer";
 
 export default function App(){
+
+
     return <>
         <header role="banner" className="title">
             <h1>WE'RE LAUNCHING SOON</h1>

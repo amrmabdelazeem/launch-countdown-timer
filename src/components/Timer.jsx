@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Timer({time}) {
+  
   return (
       <div className="card">
       <div className="page1"><h2>48</h2></div>
