@@ -46,7 +46,7 @@ main{
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: 100%;
-    position: relative;
+
 }
 .page1{
     border-radius: 5px 5px 10px 10px;
@@ -54,6 +54,12 @@ main{
     position: relative;
     display: flex;
     justify-content: center;
+    animation-name: flip-top;
+    animation-duration: .8s;
+    transform-origin: bottom;
+    animation-timing-function: ease-in;
+
+
 }
 .page2{
     border-radius: 5px 5px 5px 5px;
@@ -62,12 +68,17 @@ main{
     z-index: -1;
     display: flex;
     justify-content: center;
+    transform-origin: top;
+    animation: flip-bottom .8s ease-out;
+
 }
 h2{
     font-size: 2.1rem;
     color: var(--secondary-color);
     position: absolute;
     top: -18px;
+    overflow: hidden;
+
 }
 p{
     color: var(--primary-color);
@@ -101,6 +112,16 @@ footer img:hover{
     cursor: pointer;
     filter: invert(55%) sepia(47%) saturate(2334%) hue-rotate(309deg) brightness(99%) contrast(108%);
 }
+
+@keyframes flip-top{
+    100%{transform: rotateX(90deg);}
+    
+}
+
+@keyframes flip-bottom{
+    100%{transform: rotateX(0deg);}
+}
+
 
 @media (min-width:1440px){
     .title{

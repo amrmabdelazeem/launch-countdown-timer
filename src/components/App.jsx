@@ -9,11 +9,11 @@ export default function App() {
     seconds: "",
   });
 
-//   setInterval(()=>{
-//     setNewTime((preSecond) => {
-//         return { ...preSecond, days, hours, minutes, seconds };
-//       })
-//   }, 1000)
+  // setInterval(()=>{
+  //   setNewTime((preSecond) => {
+  //       return { ...preSecond, days, hours, minutes, seconds };
+  //     })
+  // }, 1000)
   const newDate = new Date("Dec 24, 2023 00:00:00").getTime();
   const now = new Date().getTime();
   const timeRemaining = newDate - now;
