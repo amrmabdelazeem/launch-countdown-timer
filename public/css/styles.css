@@ -79,7 +79,6 @@ body {
     width: 100%;
     box-sizing: border-box;
     background-color: var(--dark-desaturated-blue);
-    backface-visibility: hidden;
     overflow: hidden;
   }
   
@@ -106,22 +105,7 @@ body {
   .card .front .bottom {
     box-shadow: 0 0.25em 1px 0 var(--dark-blue);
   }
-  .card.flip .front .top {
-    animation-name: flipOut;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-  }
-  
-  .card .back .bottom {
-    transform-origin: top;
-    transform: rotateX(180deg);
-  }
-  
-  .card.flip .back .bottom {
-    animation-name: flipIn;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-  }
+
   .card .top::before,
   .card .top::after,
   .card .bottom::before,
@@ -186,6 +170,22 @@ footer img:hover{
     filter: invert(55%) sepia(47%) saturate(2334%) hue-rotate(309deg) brightness(99%) contrast(108%);
 }
 
+/* .card.flip .front .top {
+  animation-name: flipOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.card .back .bottom {
+  transform-origin: top;
+  transform: rotateX(180deg);
+}
+
+.card.flip .back .bottom {
+  animation-name: flipIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
 @keyframes flipIn {
     from {
       transform-origin: top;
@@ -198,57 +198,27 @@ footer img:hover{
     }
   }
   
-  @keyframes flipOut {
-    from {
-      transform: rotateX(0);
-      transform-origin: bottom;
-    }
+@keyframes flipOut {
+from {
+    transform: rotateX(0);
+    transform-origin: bottom;
+}
+
+to {
+    transform: perspective(500px) rotateX(-180deg);
+    transform-origin: bottom;
+}
+} */
   
-    to {
-      transform: perspective(500px) rotateX(-180deg);
-      transform-origin: bottom;
-    }
+@media screen and (min-width: 1024px) {
+  .card {
+    font-size: 1.75rem;
   }
-  
-  @media screen and (min-width: 1024px) {
-    .card {
-      font-size: 1.75rem;
-    }
-  }
+}
 
 @media (min-width:1440px){
-    .title{
-        margin-bottom: 4rem;
-        margin-top: 125px;
-    }
-    h1{
-        font-size: 1.5rem;
-        letter-spacing: 8px;
-    }
-    main{
-        justify-content: center;
-        gap: 1.5rem;
-    }
-    .card{
-        width: 160px;
-        height: 160px;
-        gap: 1px;
-    }
-    .page1{
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-bottom: 2px solid hsl(240, 22%, 22%);
-    }
-    .page2{
-        border-top: 2px solid hsl(240, 22%, 22%);
-        outline: 1px solid hsl(240, 22%, 22%);
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-    h2{
-        font-size: 4rem;
-        top: -20px;
-    }
+
+ 
     p{
         font-size: 1rem;
         letter-spacing: 5px;
