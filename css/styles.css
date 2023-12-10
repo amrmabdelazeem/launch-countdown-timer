@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+*{
+    font-family: 'Red Hat Text', sans-serif;
+}
+:root {
+    --soft-red: #fb6087;
+    --light-soft-red: #fc6a8f;
+    --grayish-blue: #8486a9;
+    --light-desaturated-blue: #393b57;
+    --dark-desaturated-blue: #343650;
+    --dark-blue: #1e1f29;
+    --darker-blue: #191a24;
+  }
+
+body {
+    margin: 0;
+    background-color: var(--dark-blue);
+    background-image: url("../images/bg-stars.svg");
+    font-family: "Red Hat Text", sans-serif;
+    color: #fff;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  #root {
+    display: grid;
+    grid-template-rows: 25vh 50vh 25vh;
+  }
+  
+  header {
+    padding-top: 5rem;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+  }
+  
+  main {
+    margin-top: 3rem;
+  }
+  
+  main .timer {
+    padding: 0 1.5rem;
+  }
+  
+.card {
+    display: inline-block;
+  }
+  
+  .card + .card {
+    margin-left: 1em;
+  }
+  
+  .card .container {
+    width: 5em;
+    height: 5em;
+    position: relative;
+  }
+  
+  .card .number {
+    font-size: 2em;
+    line-height: 2em;
+    color: var(--soft-red);
+    position: absolute;
+    width: 100%;
+    top: 0.25em;
+    left: 0;
+  }
+  
+  .card .top,
+  .card .bottom {
+    position: absolute;
+    height: 2.5em;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--dark-desaturated-blue);
+    overflow: hidden;
+  }
+  
+  .card .top {
+    border-radius: 0.25em 0.25em 0 0;
+  }
+  
+  .card .bottom {
+    top: 2.5em;
+    background: var(--light-desaturated-blue);
+    border-radius: 0 0 0.25em 0.25em;
+  }
+  
+  .card .bottom .number {
+    top: -1em;
+    color: var(--light-soft-red);
+  }
+  
+  .card .front .top,
+  .card .front .bottom {
+    z-index: 1;
+  }
+  
+  .card .front .bottom {
+    box-shadow: 0 0.25em 1px 0 var(--dark-blue);
+  }
+
+  .card .top::before,
+  .card .top::after,
+  .card .bottom::before,
+  .card .bottom::after {
+    display: block;
+    height: 0.25em;
+    width: 0.25em;
+    content: "";
+    background-color: var(--darker-blue);
+    position: absolute;
+  }
+  
+  .card .top::before {
+    bottom: 0;
+    border-radius: 0 100% 0 0;
+  }
+  
+  .card .top::after {
+    bottom: 0;
+    right: 0;
+    border-radius: 100% 0 0 0;
+  }
+  
+  .card .bottom::before {
+    border-radius: 0 0 100% 0;
+  }
+  
+  .card .bottom::after {
+    right: 0;
+    border-radius: 0 0 0 100%;
+  }
+  
+  .card .title {
+    color: var(--grayish-blue);
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-size: 0.5em;
+    letter-spacing: 0.25em;
+  }   
+footer{
+    background-image: url("../images/pattern-hills.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 155px;
+}
+footer img{
+    position:relative;
+    width: 20px;
+    height: 20px;
+    top: 2rem;
+}
+footer img:hover{
+    cursor: pointer;
+    filter: invert(55%) sepia(47%) saturate(2334%) hue-rotate(309deg) brightness(99%) contrast(108%);
+}
+
+/* .card.flip .front .top {
+  animation-name: flipOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.card .back .bottom {
+  transform-origin: top;
+  transform: rotateX(180deg);
+}
+
+.card.flip .back .bottom {
+  animation-name: flipIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes flipIn {
+    from {
+      transform-origin: top;
+      transform: perspective(500px) rotateX(180deg);
+    }
+  
+    to {
+      transform: rotateX(0);
+      z-index: 1;
+    }
+  }
+  
+@keyframes flipOut {
+from {
+    transform: rotateX(0);
+    transform-origin: bottom;
+}
+
+to {
+    transform: perspective(500px) rotateX(-180deg);
+    transform-origin: bottom;
+}
+} */
+  
+@media screen and (min-width: 1024px) {
+  .card {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width:1440px){
+
+ 
+    p{
+        font-size: 1rem;
+        letter-spacing: 5px;
+        top: 80px;
+    }
+    footer{
+        height: 200px;
+        background-position: 0 0;
+    }
+    footer img{
+        width: 30px;
+        height: 30px;
+        
+    }
+}
