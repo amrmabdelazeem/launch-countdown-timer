@@ -2,13 +2,29 @@ import React from "react";
 
 export default function Timer({time, show}) {
   
+ 
+
   return (
       <div className="card">
-      <div className="page1">
-      <h2>{show}</h2>
-      <h2>{show}</h2>
+          <div className="container">
+        <div className="front">
+          <div className="top">
+            <span className="number">{show}</span>
+          </div>
+          <div className="bottom">
+            <span className="number">{show}</span>
+          </div>
+        </div>
+        <div className="back">
+          <div className="top">
+            <span className="number">{show}</span>
+          </div>
+          <div className="bottom">
+            <span className="number">{show}</span>
+          </div>
+        </div>
       </div>
-      <div className="page2"><p>{time}</p></div>
+      <div className="title">{time}</div>
       </div>
   );
 }
