@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Timer from "./Timer";
 
 export default function App() {
@@ -9,11 +9,10 @@ export default function App() {
     seconds: "",
   });
 
-
   const newDate = new Date("Dec 24, 2023 00:00:00").getTime();
   const now = new Date().getTime();
 
-  function getTime(){
+  function getTime() {
     const timeRemaining = newDate - now;
 
     const days = String(Math.floor(timeRemaining / (1000 * 60 * 60 * 24)));
@@ -32,10 +31,9 @@ export default function App() {
       seconds: seconds,
     });
   }
-    setInterval(()=>{
-      getTime()
-  }, 1000)
-
+  setInterval(() => {
+    getTime();
+  }, 1000);
 
   return (
     <>
@@ -46,7 +44,7 @@ export default function App() {
         <Timer time="DAYS" show={newTime.days} />
         <Timer time="HOURS" show={newTime.hours} />
         <Timer time="MINUTES" show={newTime.minutes} />
-        <Timer time="SECONDS" show={newTime.seconds}/>
+        <Timer time="SECONDS" show={newTime.seconds} />
       </main>
       <footer role="contentinfo">
         <img src="./images/icon-facebook.svg" alt="facebook-icon" />
